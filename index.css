@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-body {
+    background: url('wlcm-b.jpg') center;
+    height: 96vh;
+    background-size: cover;
+}
+
+.all-links {
+    width: 80%;
+    height: 95%;
+    margin: auto;
+    margin-top: 1%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00000042;
+}
+
+.all-links h1 {
+    text-align: center;
+    font-size: 100%;
+    padding: 1%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    text-align: center;
+    padding: 1.5%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.footer {
+    background-color: #251e42;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    padding: 0.5%;
+}
+
+.footer p {
+    font-size: 90%;
+}
+
+form {
+    width: 80%;
+    height: auto;
+    padding: 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px #00000042;
+    margin: auto;
+    border: 1px solid #eee;
+    margin-top: 5%;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2%;
+}
+
+form input, select {
+    width: 100%;
+    outline: none;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 1%;
+    border: 0.5px solid #57576e;
+}
+
+form .form-header {
+    font-size: 70%;
+    text-align: center;
+    margin: 1% 1% 2%;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #251e42;
+    color: #ffffff;
+}
+
+.gender input {
+    width: 5%;
+    float: left;
+    vertical-align: middle;
+}
+
+.gender label:not(:first-child) {
+    width: 40%;
+    float: left;
+    font-size: 80%;
+    padding-left: 2%;
+    margin-top: -1.2%;
+}
+
+@media only screen and (min-width: 600px) {
+    form {
+        width: 500px;
+    }
+    .gender label:not(:first-child) {
+        font-size: 90%;
+    }
+}
+
+/* 
+.row {
+    display: flex;
+    align-items: center;
+    margin: 3% auto
+}
+
+.check-row {
+    width: 100%;
+    text-align: center;
+}
+
+.check-row label {
+    position: relative;
+    width: fit-content;
+    left: 5%;
+}
+
+.row-not-check {
+    justify-content: space-between;
+}
+
+form {
+    display: block;
+    background-color: #ffffff;
+    width: 45%;
+    margin: 3% auto;
+    padding: 2% 2%;
+    border-radius: 2%;
+    box-shadow: 0 0 8px #ccc;
+}
+
+label {
+    color: #808080;
+    font-size: 1.3em;
+    width: 25%;
+}
+
+input[type="text"],
+select,
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="password"] {
+    width: 70%;
+    height: 6%;
+    background-color: #f1f1f1;
+    padding: 5px;
+    outline: none;
+    font-size: 1em;
+    border: none;
+    border-bottom: 3px solid teal;
+}
+
+textarea {
+    width: 70%;
+    outline: none;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+.row *{
+    vertical-align: middle;
+}
+
+.header{
+    text-align: center;
+    background-color: teal;
+    padding: 2px;
+    font-size: 1.4em;
+}
+
+.submit {
+    width: 100%;
+    height: 3em;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: teal;
+    font-weight: 600;
+    font-size: 1.4em;
+    outline: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: transparent;
+    border: 1px solid teal;
+    color: teal;
+}
+
+.form-header {
+    text-align: center;
+}
+
+.languages {
+    display: flex;
+    height: 10%;
+}
+
+.lang-item {
+    width: 50%;
+    height: auto;
+}
+
+.lang-header * {
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    background-color: teal;
+    font-size: 1.3em;
+    padding: 2px;
+}
+
+@media only screen and (min-width: 281px) and (max-width: 760px) {
+    form {
+        width: 90%;
+        height: auto;
+        display: block;
+        flex-direction: column;
+    }
+    body {
+        font-size: 0.8em;
+    }
+    .row{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        display: block;
+        width: 90%;
+        justify-content: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    input[type="tel"],
+    input[type="password"],
+    select, textarea {
+        width: 90%;
+    }
+    .gender {
+        justify-content: left;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+    }
+    .gender label:first-of-type{
+        text-align: left;
+        padding-left: 5%;
+        width: 100%;
+        display: block;
+        font-weight: 400;
+    }
+    .gender label:not(:first-child) {
+        width: 20%;
+        float: left;
+    }
+    .gender input{
+        width: 10%;
+        margin-left: 5%;
+    }
+    .languages {
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+    }
+    .languages>div:first-of-type{
+        text-align: left;
+        padding-left: 5%;
+        width: 100%;
+        display: block;
+    }
+    .languages>div:not(:first-child) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1% auto;
+    }
+    .languages>div div {
+        width: 70%;
+        margin: 1% 2%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1023px ) and (min-width: 768px) {
+    form {
+        width: 70%;
+    }
+    body {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1175.04px) {
+    body {
+        font-size: 1.7em;
+    }
+    form {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 280px) and (min-width: 100px) {
+    form {
+        width: 90%;
+        height: auto;
+        display: block;
+        flex-direction: column;
+    }
+    body {
+        font-size: 70%;
+    }
+    .row{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        display: block;
+        width: 90%;
+        justify-content: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    input[type="tel"],
+    input[type="password"],
+    select, textarea {
+        width: 90%;
+    }
+    .gender {
+        justify-content: left;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+    }
+    .gender label:first-of-type{
+        text-align: left;
+        padding-left: 5%;
+        width: 100%;
+        display: block;
+        font-weight: 400;
+    }
+    .gender label:not(:first-child) {
+        width: 20%;
+        float: left;
+    }
+    .gender input{
+        width: 10%;
+        margin-left: 5%;
+    }
+    .languages {
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+    }
+    .languages>div:first-of-type{
+        text-align: left;
+        padding-left: 5%;
+        width: 100%;
+        display: block;
+    }
+    .languages>div:not(:first-child) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1% auto;
+    }
+    .languages>div div {
+        width: 70%;
+        margin: 1% 2%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+    }
+} */
